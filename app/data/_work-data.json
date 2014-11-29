@@ -1,0 +1,91 @@
+[
+    {
+        "id"       : "equestria",
+        "title"    : "Equestria Dash Online",
+        "url"      : "http://www.hasbro.com/mylittlepony/en_US/play/details.cfm?R=D1295D58-5056-9047-F537-E60E58526896:en_US",
+        "imageUrl" : "/images/2014-equestria",
+        "year"     : "2014",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "stripe",
+        "title"    : "Stripe Yourself",
+        "url"      : "http://sdzsafaripark.org/stripeyourself/",
+        "imageUrl" : "/images/2014-stripe",
+        "year"     : "2014",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "visualizing",
+        "title"    : "Visualizing Time For World War 1",
+        "url"      : "http://visualizing.org/full-screen/278150",
+        "imageUrl" : "/images/2014-visualizing",
+        "year"     : "2014",
+        "type"     : "Personal Project",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "greeting",
+        "title"    : "Greeting Site 2014",
+        "url"      : "http://kenjispecial.github.io/greeting-2014/",
+        "imageUrl" : "/images/2014-greeting",
+        "year"     : "2014",
+        "type"     : "Personal Project",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "silence",
+        "title"    : "Silence the Shadow",
+        "url"      : "http://www.silencetheshadows.com/",
+        "imageUrl" : "/images/2013-silence",
+        "year"     : "2013",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "prudential",
+        "title"    : "Time To Up It",
+        "url"      : "http://www.bringyourchallenges.com/time-to-up-it",
+        "imageUrl" : "/images/2013-prudential",
+        "year"     : "2013",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "lux",
+        "title"    : "Lux Ahoy, HTML5 Game",
+        "url"      : "http://luxahoy.com/",
+        "imageUrl" : "/images/2013-lux",
+        "year"     : "2013",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "bop",
+        "title"    : "Bop A Minion",
+        "url"      : "http://www.bopaminion.com/",
+        "imageUrl" : "/images/2013-bop",
+        "year"     : "2013",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    },
+
+    {
+        "id"       : "old",
+        "title"    : "Old Portfolio",
+        "url"      : "http://www.kenji-special.net",
+        "imageUrl" : "/images/2013-old",
+        "year"     : "2013",
+        "type"     : "Client Work",
+        "technology" : "JavaScript"
+    }
+]

@@ -1,0 +1,382 @@
+@import "../utils/constant";
+
+#ks-root{
+    overflow: hidden;
+    @include size(100%);
+    position: absolute;
+
+    &.active {
+        cursor: grab;
+        cursor: -webkit-grab;
+        cursor: -moz-grab;
+
+        &.grabbing {
+            cursor: grabbing;
+            cursor: -webkit-grabbing;
+            cursor: -moz-grabbing;
+        }
+    }
+}
+
+#ks-main{
+    position: absolute;
+    @include size(100%);
+    @include webkit-accelerated();
+
+    .work-container{
+
+        @include translate(5000px, 5000px);
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        position: absolute;
+
+        display: none;
+        cursor: pointer;
+
+
+        @include respond-to(mobile-screens){
+            top: -1 * $mobileHeight/2;
+            left: -1 * $mobileWidth/2;
+        }
+        @include respond-to(medium-screens){
+            top: -1 * $mobileHeight/2;
+            left: -1 * $mobileWidth/2;
+        }
+        @include respond-to(wide-screens){
+            top: -1 * $workHeight/2;
+            left: -1 * $workWidth/2;
+        }
+        @include respond-to(max-screens){
+            top: -1 * $workHeight/2;
+            left: -1 * $workWidth/2;
+        }
+
+
+        .work-inside-container{
+            //position: absolute;
+            //top: 0;
+            //left: 0;
+            @include respond-to(mobile-screens){
+                width: $mobileWidth;
+                height: $mobileHeight;
+            }
+            @include respond-to(medium-screens){
+                width: $mobileWidth;
+                height: $mobileHeight;
+            }
+            @include respond-to(wide-screens){
+                width: $workWidth;
+                height: $workHeight;
+            }
+            @include respond-to(max-screens){
+                width: $workWidth;
+                height: $workHeight;
+            }
+
+
+
+            @include perspective(1000);
+            @include transform-style( preserve-3d );
+        }
+
+
+
+        .front, .back{
+
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+            @include respond-to(mobile-screens){
+                width: $mobileWidth;
+                height: $mobileHeight;
+            }
+            @include respond-to(medium-screens){
+                width: $mobileWidth;
+                height: $mobileHeight;
+            }
+            @include respond-to(wide-screens){
+                width: $workWidth;
+                height: $workHeight;
+            }
+            @include respond-to(max-screens){
+                width: $workWidth;
+                height: $workHeight;
+            }
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @include transform-style( preserve-3d );
+        }
+
+        .work{
+            @include transform-style( preserve-3d );
+            position: relative;
+        }
+
+
+        .front{
+            z-index: 1;
+            @include single-box-shadow($hoff: 0, $voff: 10px, $blur: 80px, $spread: 0, $color: rgba(0, 0, 0, 0.3));
+            @include transition(box-shadow 0.3s ease-out);
+            @include rotateY(0deg);
+
+            &:hover{
+                @include single-box-shadow($hoff: 0, $voff: 10px, $blur: 120px, $spread: 0, $color: rgba(0, 0, 0, .8));
+            }
+
+            &.on-selected {
+                cursor: default;
+
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+
+                &:hover{
+                    -webkit-box-shadow: none;
+                    -moz-box-shadow: none;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .back{
+        }
+    }
+
+    // ================
+    //     front
+    // ================
+
+    .front{
+
+        .triangle{
+            position: absolute;
+
+            @include respond-to(mobile-screens){
+                @include triangle(60px);
+            }
+            @include respond-to(medium-screens){
+                @include triangle(60px);
+            }
+            @include respond-to(wide-screens){
+                @include triangle(100px);
+            }
+            @include respond-to(max-screens){
+                @include triangle(100px);
+            }
+
+        }
+
+        .work-header{
+            position: absolute;
+
+            z-index: 100;
+            color: #ffffff;
+
+
+            @include respond-to(mobile-screens){
+                top: 0px;
+                left: 7px;
+                line-height: 1em;
+            }
+            @include respond-to(medium-screens){
+                top: 0px;
+                left: 7px;
+                line-height: 1em;
+            }
+            @include respond-to(wide-screens){
+                top: 10px;
+                left: 15px;
+                line-height: 1.2em;
+            }
+            @include respond-to(max-screens){
+                top: 10px;
+                left: 15px;
+                line-height: 1.2em
+            }
+
+
+            .day{
+
+                @include respond-to(mobile-screens){
+                    font-size: 10px;
+                }
+                @include respond-to(medium-screens){
+                    font-size: 10px;
+                }
+                @include respond-to(wide-screens){
+                    font-size: 12px;
+                }
+                @include respond-to(max-screens){
+                    font-size: 12px;
+                }
+            }
+
+            .number{
+                font-weight: 800;
+                @include respond-to(mobile-screens){
+                    font-size: 16px;
+                }
+                @include respond-to(medium-screens){
+                    font-size: 16px;
+                }
+                @include respond-to(wide-screens){
+                    font-size: 20px;
+                }
+                @include respond-to(max-screens){
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+        img{
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            @include respond-to(mobile-screens){
+                width: $mobileWidth;
+                height: $mobileHeight;
+            }
+            @include respond-to(medium-screens){
+                width: $mobileWidth;
+                height: $mobileHeight;
+            }
+            @include respond-to(wide-screens){
+                width: $workWidth;
+                height: $workHeight;
+            }
+            @include respond-to(max-screens){
+                width: $workWidth;
+                height: $workHeight;
+            }
+
+
+
+        }
+    }
+
+    // ================
+    //    back
+    // ================
+
+    .back{
+        @include rotateY(180deg);
+        border: #ffffff 1px solid;
+        background: #cccccc;
+
+        .ks-back-title{
+            text-align: center;
+
+
+            @include respond-to(mobile-screens){
+                font-size: 12px;
+                margin-top: 70px;
+            }
+            @include respond-to(medium-screens){
+                font-size: 12px;
+                margin-top: 70px;
+            }
+            @include respond-to(wide-screens){
+                font-size: 18px;
+                margin-top: 105px;
+            }
+            @include respond-to(max-screens){
+                font-size: 18px;
+                margin-top: 105px;
+            }
+
+
+        }
+
+    }
+
+}
+
+#ks-bg-canvas{
+    @include size(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#ks-guide{
+    #finger{
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        //@include single-box-shadow($hoff: 0, $voff: 10px, $blur: 80px, $spread: 0, $color: rgba(0, 0, 0, 0.3));
+
+        img{
+            width: $fingerSize;
+            height: $fingerSize;
+        }
+
+        opacity: 0;
+
+        display: none;
+    }
+}
+
+// ---------------
+//  ks-code-pen
+// ---------------
+
+#ks-code-pen{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(100%);
+
+    #ks-code-pen-container{
+        @include size(100%);
+    }
+
+    iframe {
+        @include size(100%);
+    }
+
+    #close-button-wrapper {
+        position: relative;
+
+        @include respond-to(mobile-screens){ margin: 0; width: 100%;}
+        @include respond-to(medium-screens){ margin: 0; width:100%;}
+        @include respond-to(wide-screens){  width: $MID_WIDTH; margin: auto;}
+        @include respond-to(max-screens){   width: $MAX_WIDTH; margin: auto;}
+
+    }
+
+    #close-button-container {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 0;
+
+
+        width: 40px;
+        height: 40px;
+
+        z-index: 9999;
+        @include transition(.3s);
+        @include translateY(-100px);
+        @include transition-timing-function(ease-out);
+
+        &.active{
+
+            @include respond-to(mobile-screens){ @include translateY(-10px);}
+            @include respond-to(medium-screens){ @include translateY(-10px);}
+            @include respond-to(wide-screens){ @include translateY(15px);}
+            @include respond-to(max-screens){ @include translateY(30px);}
+
+        }
+    }
+
+
+}

@@ -1,0 +1,38 @@
+
+ #ks-footer {
+     display: none;
+     position: absolute;
+     left: 50%;
+
+
+     @include translateX(-50%);
+
+     @include respond-to(mobile-screens){
+         font-size: 12px;
+         bottom: 10px;
+     }
+     @include respond-to(medium-screens){
+         font-size: 12px;
+         bottom: 10px;
+     }
+     @include respond-to(wide-screens){
+         font-size: 14px;
+         bottom: 20px;
+     }
+     @include respond-to(max-screens){
+         font-size: 14px;
+         bottom: 20px;
+     }
+
+ }
+
+ #ks-footer-container{
+
+     cursor: pointer;
+     color: #999;
+     @include transition(.6s);
+
+     &:hover{
+         color: #000000;
+     }
+ }

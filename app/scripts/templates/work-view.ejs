@@ -1,0 +1,48 @@
+<%
+
+var workDataLength = workDataJSON.length;
+var workDataLengthStr;
+for(var i in workDataJSON){
+    var workData = workDataJSON[i];
+
+    var id = workData.id;
+    var title = workData.title;
+    var thumbnailUrl = workData.thumbnail_url;
+
+    var curWorkHeader = workDataLength;
+    if(workDataLength < 10) workDataLengthStr = "0" + workDataLength;
+    else                    workDataLengthStr = workDataLength;
+    workDataLength--;
+%>
+
+<div class="work-container" id="work-<%= id %>" data-id="<%= id %>">
+
+    <div class="work-inside-container">
+        <div class="work">
+            <!--front-->
+            <div class="front">
+                <!--<div class="work" >-->
+
+                    <div class="work-image"></div>
+                    <div class="triangle"></div>
+                    <div class="work-header">
+                        <span class="day">Day<br></span>
+                        <span class="number"><%= workDataLengthStr %></span>
+                    </div>
+                <!--</div>-->
+            </div>
+
+            <div class="back">
+                <div class="ks-back-title">
+                    <%= title %>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<%
+}
+%>

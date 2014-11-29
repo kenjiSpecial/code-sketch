@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Code Sketch</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <meta property="og:title" content="Code Sketch">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://cs.kenji-special.info/images/sns/main.png">
+    <meta property="og:description" content="Code Sketch is the collection of the sketch with code, Javascript on CodePen from May 2014.">
+    <meta property="og:url" content="http://cs.kenji-special.info/">
+    <meta property="og:site_name" content="Code Sketch">
+    <!-- close.SEO -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:description" content="Code Sketch is the collection of the sketch with code, Javascript on CodePen from May 2014.">
+    <meta name="twitter:title" content="Code Sketch">
+
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+<!--[if lt IE 10]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div id="ks-main-container">
+
+    <section id="ks-loader">
+        <canvas id="ks-loader-canvas"></canvas>
+    </section>
+
+    <section id="ks-root">
+        <canvas id="ks-bg-canvas"></canvas>
+
+        <section id="ks-code-pen">
+
+            <div id="close-button-wrapper">
+                <div id="close-button-container">
+                    <div class="open-close-button"></div>
+                </div>
+            </div>
+
+            <div id="ks-code-pen-container">
+
+            </div>
+        </section>
+
+        <section id="ks-main"></section>
+
+        <section id="ks-footer">
+            <div id="ks-footer-container">About / Share</div>
+        </section>
+
+        <section id="ks-about">
+            <canvas id="ks-about-canvas"></canvas>
+
+            <div id="ks-about-close-button-wrapper">
+                <div id="ks-about-close-button-container">
+                    <div class="open-close-button"></div>
+                </div>
+            </div>
+
+
+            <div id="ks-about-wrapper">
+                <div id="ks-about-container">
+                    <h2 class="ks-about-title">About</h2>
+                    <div class="ks-about-description">
+                        <p class="jp">Code Sketchは2014年5月から始めたCodePenで書き残してきたJavaScriptによるスケッチの記録です。</p>
+                        <p class="en">Code Sketch is the collection of the sketch with code, Javascript on CodePen from May 2014.</p>
+                    </div>
+
+                    <div class="ks-author">
+                        <div class="name">
+                            <p>Designed, Developed, and Sketch</p>
+                            <p>By</p>
+                            <p>Kenji Saito</p>
+                        </div>
+                        <p>
+                            <span><a href="http://kenji-special.info/" target="_blank">Website</a></span>
+                            <span><a href="https://github.com/kenjiSpecial" target="_blank">GitHub</a></span>
+                            <span><a href="https://twitter.com/kenji_special" target="_blank">Twitter</a></span>
+                            <span><a href="http://codepen.io/kenjiSpecial/" target="_blank">CodePen</a></span>
+                        </p>
+                    </div>
+
+                    <div class="ks-sns">
+                        <h2>Share</h2>
+                        <div class="sns-list">
+                            <div class="twitter sns-icon">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                            </div>
+                            <div class="fb sns-icon">
+                                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcs.kenji-special.info%2F&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=35&amp;appId=682343071885942" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>
+                            </div>
+
+                            <div class="pinterest sns-icon">
+                                <a href="//www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png" /></a>
+                                <!-- Please call pinit.js only once per page -->
+                                <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="ks-guide">
+            <div id="finger">
+            </div>
+        </section>
+
+    </section>
+
+    <section id="ks-title">
+        <h1>Code Sketch</h1>
+        <div><a href="http://codepen.io/kenjiSpecial/" target="_blank">Kenji's CodePen Collection</a></div>
+    </section>
+
+</div>
+
+
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-57102707-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!-- build:js scripts/main.js -->
+<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+<!-- endbuild -->
+</body>
+</html>

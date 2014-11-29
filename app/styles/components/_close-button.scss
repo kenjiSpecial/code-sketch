@@ -1,0 +1,51 @@
+
+$color: #333;
+$contrast: #eee;
+$transition-duration: 0.5s;
+
+.open-close-button {
+
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+
+    border: 0.1em solid $contrast;
+    font-size: 3em;
+    border-radius: 50%;
+    position: relative;
+    background-color: $contrast;
+
+    @include transition($transition-duration);
+    @include translateZ(0); // Force 3D context.
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $color;
+        width: 80%;
+        height: 6%;;
+        left: 10%;
+        top: 47%;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $color;
+        width: 6%;
+        height: 80%;
+        left: 47%;
+        top: 10%;
+    }
+
+
+    @include rotate(225deg);
+
+    &:hover{
+        @include rotate(-135deg);
+
+    }
+
+}

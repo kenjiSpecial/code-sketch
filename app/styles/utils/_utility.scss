@@ -1,0 +1,97 @@
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
+}
+
+@mixin alignItem($value) {
+    align-items: $value;
+    -webkit-align-items: $value;
+}
+
+@mixin justifyContent($value) {
+    justify-content: $value;
+    -webkit-justify-content: $value;
+}
+
+@mixin flexFlow($value) {
+    flex-flow: $value;
+    -webkit-flex-flow: $value;
+}
+
+@mixin size($width, $height: null) {
+    @if $width  != null {
+        width: $width;
+    }
+    @if $height != null {
+        height: $height;
+    } @else {
+        height: $width;
+    }
+}
+
+@mixin webkit-accelerated() {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+@mixin triangle($side) {
+
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+
+    border-bottom-color: rgba(0, 0, 0, 0);
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: rgba(0, 0, 0, 0);
+    border-right-style: solid;
+    border-right-width: $side;
+
+    //border-top-color: #2c3e50;
+    border-top-color: #bdc3c7;
+    border-top-style: solid;
+    border-top-width: $side;
+
+    height: 0px;
+    width: 0px;
+
+}
+
+@mixin respond-to($media) {
+
+    @if $media == mobile-screens {
+        @media only screen and (max-width: $SMALL_WIDTH) {
+            @content;
+        }
+    } @else if $media == medium-screens {
+        @media only screen and (min-width: $SMALL_WIDTH + 1) and (max-width: $MID_WIDTH - 1) {
+            @content;
+        }
+    } @else if $media == wide-screens {
+        @media only screen and (min-width: $MID_WIDTH) and (max-width: $MAX_WIDTH - 1) {
+            @content;
+        }
+    } @else if $media == max-screens {
+        @media only screen and (min-width: $MAX_WIDTH) {
+            @content;
+        }
+    }
+
+}
+

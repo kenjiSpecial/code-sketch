@@ -1,0 +1,62 @@
+#ks-title{
+    position: fixed;
+    left: 50%;
+    top: 0;
+    display: none;
+    z-index: 2000;
+
+
+    @include respond-to(mobile-screens){ @include translate(-50%,20px);}
+    @include respond-to(medium-screens){ @include translate(-50%,30px); }
+    @include respond-to(wide-screens){ @include translate(-50%,40px); }
+    @include respond-to(max-screens){ @include translate(-50%,50px); }
+
+    h1{
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        font-weight: 700;
+        //font-size: 30px;
+
+        @include respond-to(mobile-screens){ font-size: 18px; }
+        @include respond-to(medium-screens){ font-size: 22px; }
+        @include respond-to(wide-screens){ font-size: 30px; }
+        @include respond-to(max-screens){ font-size: 30px; }
+
+        color: #000000;
+        @include transition(.6s);
+    }
+
+    div{
+        @include respond-to(mobile-screens){ font-size: 12px; }
+        @include respond-to(medium-screens){ font-size: 12px; }
+        @include respond-to(wide-screens){ font-size: 14px; }
+        @include respond-to(max-screens){ font-size: 14px; }
+
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #999;
+            @include transition(.6s);
+
+            &:hover{
+                color: #000000;
+            }
+        }
+    }
+
+    &.about{
+        h1 {
+            color: #ffffff;
+        }
+
+        div{
+            a{
+                color: #dddddd;
+                &:hover{
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

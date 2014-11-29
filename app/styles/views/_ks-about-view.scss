@@ -1,0 +1,191 @@
+#ks-about{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    @include size(100%);
+    z-index: 1000;
+
+    font-weight: 300;
+
+    h2{
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.3em;
+        @include respond-to(mobile-screens){ margin-bottom: 10px;}
+        @include respond-to(medium-screens){ margin-bottom: 10px; }
+        @include respond-to(wide-screens){ margin-bottom: 20px; }
+        @include respond-to(max-screens){ margin-bottom: 20px; }
+    }
+}
+
+    #ks-about-canvas{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(100%);
+    }
+
+    #ks-about-close-button-wrapper {
+        //position: absolute;
+        position: relative;
+
+        @include respond-to(mobile-screens){ margin: 0; width: 100%;}
+        @include respond-to(medium-screens){ margin: 0; width:100%;}
+        @include respond-to(wide-screens){  width: 420px; margin: auto;}
+        @include respond-to(max-screens){   width: 420px; margin: auto;}
+
+    }
+
+    #ks-about-close-button-container {
+        position: absolute;
+        cursor: pointer;
+        top: 20px;
+        right: 0;
+
+
+        width: 40px;
+        height: 40px;
+
+        z-index: 9999;
+        @include transition(.3s);
+        opacity: 0;
+        @include respond-to(mobile-screens){ @include translateY(-30px);}
+        @include respond-to(medium-screens){ @include translateY(-30px);}
+        @include respond-to(wide-screens){ @include translateY(35px);}
+        @include respond-to(max-screens){ @include translateY(50px);}
+        @include transition-timing-function(ease-out);
+
+        &.active{
+            opacity: 1;
+            @include respond-to(mobile-screens){ @include translateY(-10px);}
+            @include respond-to(medium-screens){ @include translateY(-10px);}
+            @include respond-to(wide-screens){ @include translateY(15px);}
+            @include respond-to(max-screens){ @include translateY(30px);}
+
+        }
+
+        .open-close-button {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+
+            &:after {
+
+                background-color: rgb(255, 255, 255);
+            }
+            &:before {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+    #ks-about-wrapper{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    #ks-about-container{
+        width: 310px;
+
+        @include respond-to(mobile-screens){ margin-top: 110px;}
+        @include respond-to(medium-screens){ margin-top: 110px; }
+        @include respond-to(wide-screens){ margin-top: 140px; }
+        @include respond-to(max-screens){ margin-top: 150px; }
+
+        margin-left: auto;
+        margin-right: auto;
+
+        color: #ffffff;
+        font-size: 12px;
+        p {
+            line-height: 1.4em;
+        }
+
+        .jp{
+            font-family: 'Noto Sans Japanese', sans-serif;
+
+            @include respond-to(mobile-screens){ margin-bottom: 10px;}
+            @include respond-to(medium-screens){ margin-bottom: 10px; }
+            @include respond-to(wide-screens){ margin-bottom: 20px; }
+            @include respond-to(max-screens){ margin-bottom: 20px; }
+        }
+
+        .ks-about-description{
+            @include respond-to(mobile-screens){ margin-bottom: 15px;}
+            @include respond-to(medium-screens){ margin-bottom: 15px; }
+            @include respond-to(wide-screens){ margin-bottom: 30px; }
+            @include respond-to(max-screens){ margin-bottom: 30px; }
+        }
+
+        .ks-author{
+            @include respond-to(mobile-screens){ margin-bottom: 25px;}
+            @include respond-to(medium-screens){ margin-bottom: 25px; }
+            @include respond-to(wide-screens){ margin-bottom: 50px; }
+            @include respond-to(max-screens){ margin-bottom: 50px; }
+
+            p{
+                text-align: center;
+                line-height: 1.8em;
+
+                &.name{
+                    margin-bottom: 5px;
+                }
+
+                span{
+                    margin-right: 12px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+
+                a{
+                    padding: 2px 5px;
+                    color: #dddddd;
+                    text-decoration: none;
+                    @include transition(.6s);
+
+                    &:hover{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .ks-sns{
+
+            .sns-list{
+                overflow: hidden;
+            }
+
+            .sns-icon{
+                float: left;
+                width: 90px;
+                margin-right: 15px;
+                margin-bottom: 10px;
+
+                &.twitter{
+                    margin-left: 40px;
+                    width: 60px;
+                }
+
+                &.fb{
+                    width: 95px;
+                }
+
+                &.pinterest{
+                    width: 40px;
+                }
+
+                &.hatebu{
+                    width: 40px;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+

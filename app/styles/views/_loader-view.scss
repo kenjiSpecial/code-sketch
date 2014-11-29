@@ -1,0 +1,11 @@
+@import "../utils/utility";
+
+#ks-loader {
+    overflow: hidden;
+    position: absolute;
+    @include size(100%)
+}
+
+#ks-loader-canvas{
+    @include size(100%)
+}
