@@ -70,7 +70,7 @@ define([
             events.on(events.TICK, this.update);
 
             var init = .8;
-            var kankaku = 0.15;
+            var kankaku = 0.05;
             TweenLite.fromTo(this.aboutTitleDom,.4 ,{opacity: 0, y: +40}, {opacity: 1, y: 0, ease : "Power1.easeOut", delay:init});
             TweenLite.fromTo(this.jpTextDom,.4 ,{opacity: 0, y: +40}, {opacity: 1, y: 0, ease : "Power1.easeOut", delay:init+ kankaku});
             TweenLite.fromTo(this.enTextDom,.4 ,{opacity: 0, y: +40}, {opacity: 1, y: 0, ease : "Power1.easeOut", delay:init + kankaku*2});
@@ -80,7 +80,7 @@ define([
             this.$root.removeClass("active");
 
 
-            _.delay(this.delayShowCloseButton, 1800);
+            _.delay(this.delayShowCloseButton, 1200);
         },
 
         delayShowCloseButton : function(){
@@ -114,7 +114,7 @@ define([
             this.$title.removeClass("about");
 
             var init = 0;
-            var kankaku = 0.15;
+            var kankaku = 0.05;
             TweenLite.to(this.aboutTitleDom,.4, {opacity: 0, y: +40, ease : "Power1.easeOut", delay:init + kankaku*4 });
             TweenLite.to(this.jpTextDom,.4 , {opacity: 0, y: +40, ease : "Power1.easeOut", delay:init+ kankaku*3});
             TweenLite.to(this.enTextDom,.4 , {opacity: 0, y: +40, ease : "Power1.easeOut", delay:init + kankaku*2});

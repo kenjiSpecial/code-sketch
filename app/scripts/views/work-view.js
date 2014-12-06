@@ -88,7 +88,7 @@ define([
             this.isRender = true;
             var workModelCollectionJSON = workModelCollection.toJSON();
 
-            var template = this.template({ workDataJSON : workModelCollectionJSON});
+            var template = this.template({ workDataJSON : workModelCollectionJSON, isMobile: modernizr.isMobile});
             this.$el.html(template);
 
 
@@ -101,7 +101,6 @@ define([
             // set models of work.
             workModelCollectionJSON.forEach(function(element, idNum, val){
                 var xPos = gap * idNum;
-                //var yPos = (window.innerHeight - 120 - CONSTANTS.IMAGE.height - 50) * Math.random() +( 120 + CONSTANTS.IMAGE.height/2)
                 var yPos = window.innerHeight * (.5 +.1 * (Math.random() -.5) );
                 var zPos = -1000 * Math.random();
 
@@ -117,8 +116,6 @@ define([
                     var img    = loader.get(id);
                     var $div = $(div);
                     $div.find(".work-image").append(img);
-                    console.log(img);
-
                 }
 
                 var workModel = new WorkModel({id: id, div: div, xPos: xPos, yPos: yPos, zPos: zPos});
@@ -256,6 +253,8 @@ define([
             var workId = event.currentTarget.dataset.id;
             this.workModelCollection.onSelectWork(workId);
 
+            var $targetLoader = $(event.target).find(".work-img-loader");
+            $targetLoader.css({display: "none"});
 
             if(this.router) this.router.navigate( "#pen/" + workId, {trigger: true});
         },

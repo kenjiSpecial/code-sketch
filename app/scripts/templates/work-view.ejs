@@ -2,6 +2,7 @@
 
 var workDataLength = workDataJSON.length;
 var workDataLengthStr;
+
 for(var i in workDataJSON){
     var workData = workDataJSON[i];
 
@@ -23,13 +24,26 @@ for(var i in workDataJSON){
             <div class="front">
                 <!--<div class="work" >-->
 
-                    <div class="work-image"></div>
+                    <div class="work-image" ></div>
                     <div class="triangle"></div>
                     <div class="work-header">
                         <span class="day">Day<br></span>
                         <span class="number"><%= workDataLengthStr %></span>
                     </div>
                 <!--</div>-->
+
+                <div class="wrap clearfix work-img-loader <% if(isMobile){%>
+                    click
+                <%}%> ">
+                        <ul class="rotate_wrapper">
+                            <li class="rotate_item"><span></span></li>
+                            <li class="rotate_item delay1"><span></span></li>
+                            <li class="rotate_item delay2"><span></span></li>
+                            <li class="rotate_item delay3"><span></span></li>
+                            <li class="rotate_item delay4"><span></span></li>
+                        </ul>
+                </div>
+
             </div>
 
             <div class="back">

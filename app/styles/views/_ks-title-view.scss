@@ -27,7 +27,7 @@
     }
 
     div{
-        @include respond-to(mobile-screens){ font-size: 12px; }
+        @include respond-to(mobile-screens){ font-size: 10px; }
         @include respond-to(medium-screens){ font-size: 12px; }
         @include respond-to(wide-screens){ font-size: 14px; }
         @include respond-to(max-screens){ font-size: 14px; }

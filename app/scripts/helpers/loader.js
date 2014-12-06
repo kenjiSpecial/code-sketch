@@ -83,12 +83,19 @@ define([
                     var $div = $(div);
                     $div.find(".work-image").append(e.result);
 
+                    var loaderDom = $div.find(".work-img-loader")[0];
                     var imgDom = $div.find("img")[0];
 
-                    TweenLite.fromTo(imgDom,.6, {opacity: 0}, {opacity: 1});
+                    TweenLite.to(loaderDom,.4, {opacity: 0});
+                    setTimeout(function(){
+                        loaderDom.style.display = "none";
+                    }, 400);
+                    TweenLite.fromTo(imgDom,.4, {opacity: 0}, {opacity: 1, delay:.3});
                 }
             }
         },
+
+
 
         onFileProgress : function(e) {
 

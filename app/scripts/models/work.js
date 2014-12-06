@@ -297,7 +297,7 @@ define([
                 div.style.opacity = 0;
                 if (this.isSelected) {
                     this.isSelected = false;
-                    var className = "on-selected"
+                    var className = "on-selected";
                     if (!this.$div) this.$div = $(div);
                     this.$div.removeClass(className);
 

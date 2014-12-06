@@ -238,10 +238,10 @@ define([
 
             this.isFull = true;
             //var tl = new TimelineLite();
-            TweenLite.to(this, 0.6, {rectTopRightX: window.innerWidth * windowModel.scaleFactor, rectTopRightY: 0, rectBotLeftX: 0, rectBotLeftY: window.innerHeight * windowModel.scaleFactor, ease:"Power3.easeOut", delay:.1});
-            TweenLite.to(this, 0.7, {rectTopLeftX: 0, rectTopLeftY: 0, rectBotRightX: window.innerWidth * windowModel.scaleFactor, rectBotRightY: window.innerHeight * windowModel.scaleFactor, delay:.2, ease:"Power3.easeOut"})
-            //TweenLite.to(this, 0.3, {rectTopRightX: window.innerWidth * windowModel.scaleFactor, rectTopRightY: 0, rectTopLeftX: 0, rectTopLeftY: 0,ease:"Power3.easeOut"});
-            //TweenLite.to(this, 0.3, {rectBotLeftX: 0, rectBotLeftY: window.innerHeight * windowModel.scaleFactor, rectBotRightX: window.innerWidth * windowModel.scaleFactor, rectBotRightY: window.innerHeight * windowModel.scaleFactor, delay:.3, ease:"Power3.easeOut"})
+            TweenLite.to(this, 0.6, {rectTopRightX: window.innerWidth * windowModel.scaleFactor, rectTopRightY: 0, ease:"Power1.easeInOut", delay:.1});
+            TweenLite.to(this, 0.6, {rectBotLeftX: 0, rectBotLeftY: window.innerHeight * windowModel.scaleFactor, ease:"Power1.easeOut", delay:.1});
+            TweenLite.to(this, 0.6, {rectTopLeftX: 0, rectTopLeftY: 0, delay:.1, ease:"Power4.easeOut"});
+            TweenLite.to(this, 0.6, {rectBotRightX: window.innerWidth * windowModel.scaleFactor, rectBotRightY: window.innerHeight * windowModel.scaleFactor, delay:.1, ease:"Power4.easeInOut"});
 
         },
 
